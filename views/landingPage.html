@@ -48,10 +48,11 @@
             </li>
           </ul>
         </nav>
+
         <div class="right flex-center">
           <a href="#contact" class="btn btn-secondary">Get a Quotes</a>
 
-          <div class="menu-btn">
+          <div class="menu-btn" aria-label="Menu">
             <i class="fa-solid fa-bars"></i>
           </div>
         </div>
@@ -60,7 +61,7 @@
 
     <!-- HEADER -->
 
-    <!-- HERO -->
+    <!-- Home -->
 
     <section id="home" class="container flex-row">
       <div class="hero__content">
@@ -71,19 +72,15 @@
         <p class="text">
           Join our community of food lovers and explore the world of cooking.
         </p>
-        <a href="/views/signUp.html" class="btn btn-primary">Get Started</a>
+        <a href="/views/signUp.html" class="btn btn-primary" aria-label="Get Started with CookChat">Get Started</a>
       </div>
 
       <div class="hero__image">
-        <img
-          src="/public/images/heroCook.png"
-          alt="cooking image"
-          width="600px"
-        />
+        <img src="/public/images/heroCook.png" alt="Person cooking" />
       </div>
     </section>
 
-    <!-- HERO -->
+    <!-- Home -->
 
     <!-- ABOUT -->
     <section id="about" class="container flex-center flex-column">
@@ -94,7 +91,7 @@
       <div class="features text-center">
         <div class="feature" style="--color: #fe6786">
           <div class="feature__icon">
-            <i class="fas fa-utensils"></i>
+            <i class="fas fa-utensils" aria-hidden="true"></i>
           </div>
 
           <h3 class="feature__title">Ratings Recipes</h3>
@@ -157,7 +154,7 @@
         </div>
 
         <div class="about__details-img">
-          <img src="/public/images/cook.png" alt="about-image" width="450px" />
+          <img src="/public/images/cook.png" alt="about image" width="600px" />
         </div>
       </div>
     </section>
@@ -176,7 +173,7 @@
         <div class="services">
           <div class="service">
             <div class="service__icon">
-              <img src="/public/images/squares.png" alt="service-icon" />
+              <img src="/public/images/squares.png" alt="service icon" />
             </div>
             <h3 class="services__title">Cookchat Forum</h3>
             <p class="service__text">
@@ -186,13 +183,15 @@
               voluptate distinctio corporis eveniet.
             </p>
             <div class="arrow-icon">
-             <a href="/views/signUp.html"><i class="fa-solid fa-arrow-right"></i></a> 
+              <a href="/views/signUp.html"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
 
           <div class="service">
             <div class="service__icon">
-              <img src="/public/images/upload.png" alt="service-icon" />
+              <img src="/public/images/upload.png" alt="service icon" />
             </div>
             <h3 class="services__title">Post</h3>
             <p class="service__text">
@@ -202,7 +201,9 @@
               voluptate distinctio corporis eveniet.
             </p>
             <div class="arrow-icon">
-             <a href="/views/signUp.html"><i class="fa-solid fa-arrow-right"></i></a> 
+              <a href="/views/signUp.html"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
 
@@ -211,7 +212,7 @@
               <img
                 src="/public/images/share.png"
                 width="120px"
-                alt="service-icon"
+                alt="service icon"
               />
             </div>
             <h3 class="services__title">Share</h3>
@@ -222,7 +223,9 @@
               voluptate distinctio corporis eveniet.
             </p>
             <div class="arrow-icon">
-             <a href="/views/signUp.html"><i class="fa-solid fa-arrow-right"></i></a> 
+              <a href="/views/signUp.html"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
 
@@ -231,7 +234,7 @@
               <img
                 src="/public/images/headphones.png"
                 width="120px"
-                alt="service-icon"
+                alt="service icon"
               />
             </div>
             <h3 class="services__title">Support</h3>
@@ -242,7 +245,9 @@
               voluptate distinctio corporis eveniet.
             </p>
             <div class="arrow-icon">
-             <a href="/views/signUp.html"><i class="fa-solid fa-arrow-right"></i></a> 
+              <a href="/views/signUp.html"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
 
@@ -251,7 +256,7 @@
               <img
                 src="/public/images/internet.png"
                 width="120px"
-                alt="service-icon"
+                alt="service icon"
               />
             </div>
             <h3 class="services__title">Global</h3>
@@ -262,7 +267,9 @@
               voluptate distinctio corporis eveniet.
             </p>
             <div class="arrow-icon">
-             <a href="/views/signUp.html"><i class="fa-solid fa-arrow-right"></i></a> 
+              <a href="/views/signUp.html"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
 
@@ -271,7 +278,7 @@
               <img
                 src="/public/images/video-360.png"
                 width="120px"
-                alt="service-icon"
+                alt="service icon"
               />
             </div>
             <h3 class="services__title">Tutorial</h3>
@@ -282,7 +289,9 @@
               voluptate distinctio corporis eveniet.
             </p>
             <div class="arrow-icon">
-             <a href="/views/signUp.html"><i class="fa-solid fa-arrow-right"></i></a> 
+              <a href="/views/signUp.html"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -291,7 +300,6 @@
     <!-- SERVICES -->
 
     <!-- PROJECTS -->
-
     <section id="recipes">
       <div class="container">
         <h5 class="section-subheading">Recipes</h5>
@@ -299,7 +307,11 @@
         <div class="projects">
           <div class="project">
             <div class="project__img">
-              <img src="/public/images/image.png" alt="food image" width="250px"/>
+              <img
+                src="/public/images/image.png"
+                alt="food image"
+                width="250px"
+              />
             </div>
             <div class="project__content">
               <h3 class="project__category">Blueberries</h3>
@@ -310,13 +322,19 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptates, quae, quoue.
               </p>
-              <a href="/views/signUp.html" class="btn btn-secondary">View Recipe</a>
+              <a href="/views/signUp.html" class="btn btn-secondary"
+                >View Recipe</a
+              >
             </div>
           </div>
 
           <div class="project">
             <div class="project__img">
-              <img src="/public/images/image.png" alt="food image" width="250px"/>
+              <img
+                src="/public/images/image.png"
+                alt="food image"
+                width="250px"
+              />
             </div>
             <div class="project__content">
               <h3 class="project__category">Blueberries</h3>
@@ -327,13 +345,19 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptates, quae, quoue.
               </p>
-              <a href="/views/signUp.html" class="btn btn-secondary">View Recipe</a>
+              <a href="/views/signUp.html" class="btn btn-secondary"
+                >View Recipe</a
+              >
             </div>
           </div>
 
           <div class="project">
             <div class="project__img">
-              <img src="/public/images/image.png" alt="food image" width="250px"/>
+              <img
+                src="/public/images/image.png"
+                alt="food image"
+                width="250px"
+              />
             </div>
             <div class="project__content">
               <h3 class="project__category">Blueberries</h3>
@@ -344,7 +368,9 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptates, quae, quoue.
               </p>
-              <a href="/views/signUp.html" class="btn btn-secondary">View Recipe</a>
+              <a href="/views/signUp.html" class="btn btn-secondary"
+                >View Recipe</a
+              >
             </div>
           </div>
         </div>
@@ -367,7 +393,7 @@
           <div class="member__img">
             <img
               src="/public/images/kanna.jpg"
-              alt="team-member"
+              alt="team member"
               width="200px"
             />
           </div>
@@ -381,7 +407,7 @@
           <div class="member__img">
             <img
               src="/public/images/khoi.jpg"
-              alt="team-member"
+              alt="team member"
               width="200px"
             />
           </div>
@@ -395,7 +421,7 @@
           <div class="member__img">
             <img
               src="/public/images/duong.jpg"
-              alt="team-member"
+              alt="team member"
               width="200px"
             />
           </div>
@@ -409,7 +435,7 @@
           <div class="member__img">
             <img
               src="/public/images/qanh.jpg"
-              alt="team-member"
+              alt="team member"
               width="200px"
             />
           </div>
@@ -423,9 +449,6 @@
 
     <!-- TEAM -->
 
-    <!-- TESTIMONIALS -->
-
-    <!-- TESTIMONIALS -->
 
     <!-- CONTACT -->
 
@@ -492,7 +515,7 @@
             <div class="footer__logo">
               <img
                 src="/public/images/logo-cookchat.png"
-                alt="logo"
+                alt="cookchat logo"
                 width="50px"
               />
               <p>COOKCHAT</p>
