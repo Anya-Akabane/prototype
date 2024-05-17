@@ -480,6 +480,7 @@ body.dark .switch::before {
     right: 0;
     width: 100%;
     z-index: 100;
+   
   }
 
   .hero nav {
@@ -495,6 +496,7 @@ body.dark .switch::before {
   .hero .notification-bell {
     font-size: 25px;
     margin-top: 0rem;
+    
   }
 
   .sub-menus-wrap {
@@ -630,8 +632,30 @@ body.dark .switch::before {
 .sub-menus-link:hover p {
   font-weight: 600;
 }
-/* 
-notification */
+/* darkmode */
+#darkModeToggle {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #525252;
+  margin: 12px 0;
+}
+
+#darkModeToggle p {
+  width: 100%;
+}
+
+#darkModeToggle i {
+  width: 40px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+#darkModeToggle:hover p {
+  font-weight: 600;
+}
 
 ul {
   list-style: none;
@@ -655,6 +679,15 @@ ul {
 .notification-drop .item i {
   margin-left: 10px;
 }
+
+body.dark .notification-drop .item {
+  color: #fafafa;
+}
+
+body.dark .notification-drop .item ul{
+  color: #000000;
+}
+
 .notification-drop .item ul {
   display: none;
   position: absolute;
@@ -673,6 +706,8 @@ ul {
   background: #ddd;
   color: rgba(0, 0, 0, 0.8);
 }
+
+
 
 @media screen and (min-width: 500px) {
   .notification-drop {
