@@ -523,7 +523,7 @@ body.dark .switch::before {
   }
 }
 
-@media only screen and (max-width: 900px) and (orientation: landscape) {
+@media only screen and (max-width: 932px) and (orientation: landscape) {
   .sidebar {
     overflow-y: auto;
     overflow-x: hidden;
