@@ -15,7 +15,15 @@
       rel="stylesheet"
     />
 
-    <title>Settings</title>
+    
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/public/images/logo-cookchat.png"
+      type="image/x-icon"
+    />
+
+    <title>Edit Profile</title>
   </head>
   <body>
     <!-- sidebar -->
@@ -23,12 +31,16 @@
       <header>
         <div class="image-text">
           <span class="image">
-            <img src="/public/images/logo-cookchat.png" alt="logo" />
+            <a href="">
+              <img src="/public/images/logo-cookchat.png" alt="logo" />
+            </a>
           </span>
 
           <div class="text header-text">
+            <a href="#">
+              <span class="name">COOKCHAT</span>
+            </a>
             
-            <span class="name">COOKCHAT</span>
           </div>
         </div>
 
@@ -52,42 +64,40 @@
             <li class="nav-link">
               <a href="/views/settings.html">
                 <i class='bx bx-edit-alt icon'></i>
-                <span class="text nav-text">Edit Profile</span>
+                <span class="text nav-text">Edit</span>
               </a>
             </li>
 
             <li class="nav-link">
               <a href="/views/changePass.html">
-               <i class='bx bx-edit icon'></i>
+                <i class='bx bxs-key icon' ></i>
                 <span class="text nav-text">Change Password</span>
               </a>
             </li>
 
             <li class="nav-link">
-              <a href="/views/account.html">
-                <i class='bx bxs-user-account icon' ></i>
-                <span class="text nav-text">Deactivate account</span>
-              </a>
-            </li>
-
-             <li class="nav-link">
               <a href="/views/security.html">
-                <i class='bx bx-shield-alt-2 icon'></i>
+                <i class='bx bx-shield icon' ></i>
                 <span class="text nav-text">Security</span>
               </a>
             </li>
 
-             <li class="nav-link">
+            <li class="nav-link">
+              <a href="/views/account.html" class="dropdown-toggle">
+                <i class='bx bxs-user-account icon' ></i>
+                <span class="text nav-text">Deactivate Account</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
               <a href="#">
                 <i class='bx bx-help-circle icon'></i>
                 <span class="text nav-text">Support</span>
               </a>
             </li>
 
-          
-
             <li class="nav-link">
-              <a href="#" class="dropdown-toggle">
+              <a href="/views/profile.html" class="dropdown-toggle">
                 <i class="icon"
                   ><img src="/public/images/profile.png" width="30px"
                 /></i>
@@ -137,33 +147,29 @@
 
             <li class="nav__item">
               <a href="#search" class="nav__link">
-                <i class="bx bx-search nav__icon"></i>
-                <span class="nav__name">Search</span>
+                <i class="bx bx-edit-alt nav__icon"></i>
+                <span class="nav__name">Edit</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="#create" class="nav__link">
-                <i class="bx bx-plus-circle nav__icon"></i>
-                <span class="nav__name">Create</span>
+                <i class="bx bxs-key nav__icon"></i>
+                <span class="nav__name">Password</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="#recipes" class="nav__link">
-                <i class="bx bx-bowl-hot nav__icon"></i>
-                <span class="nav__name">Recipes</span>
+                <i class="bx bx-shield nav__icon"></i>
+                <span class="nav__name">Security</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="#profile" class="nav__link">
-                <img
-                  src="/public/images/profile.png"
-                  width="25px"
-                  class="nav__icon"
-                />
-                <span class="nav__name">Profile</span>
+                <i class="bx bxs-user-account nav__icon"></i>
+                <span class="nav__name">Account</span>
               </a>
             </li>
           </ul>
@@ -174,19 +180,19 @@
     </header>
 
     <div class="hero">
-        
       <nav>
         <ul class="notification-drop">
-    <li class="item">
-      <i class="bx bxs-bell notification-bell" aria-hidden="true"></i> <span class="btn__badge pulse-button ">4</span>     
-      
-      <ul>
-        <li>First Item</li>
-        <li>Second Item</li>
-        <li>Third Item</li>
-      </ul>
-    </li>
-  </ul>
+          <li class="item">
+            <i class="bx bxs-bell notification-bell" aria-hidden="true"></i>
+            <span class="btn__badge pulse-button">4</span>
+
+            <ul>
+              <li>First Item</li>
+              <li>Second Item</li>
+              <li>Third Item</li>
+            </ul>
+          </li>
+        </ul>
 
         <img
           src="/public/images/user-img.jpg"
@@ -199,8 +205,15 @@
         <div class="sub-menus-wrap" id="subMenus">
           <div class="sub-menus">
             <div class="user-info">
-              <img src="/public/images/profile.png" />
-              <h3>Kanna Kamui</h3>
+              <a href="" class="sub-menus-link">
+                <img
+                  src="/public/images/profile.png"
+                  alt="profile"
+                  class="profile-pic"
+                />
+                <h3>Kanna Kamui</h3>
+              </a>
+              
             </div>
             <hr />
 
@@ -210,8 +223,15 @@
             </a>
 
             <a href="#" class="sub-menus-link">
-              <i class='bx bxs-dashboard' ></i>
+              <i class="bx bxs-dashboard"></i>
               <p>Admin</p>
+            </a>
+
+
+            <a href="#" class="sub-menus-link" id="darkModeToggle">
+              <i class="bx bx-moon
+              "></i>
+              <p>Switch Theme</p>
             </a>
 
             <a href="#" class="sub-menus-link">
@@ -227,6 +247,7 @@
         </div>
       </nav>
     </div>
+
 
 
     <section class="home">
@@ -291,9 +312,8 @@
 
       </section>
 
-
     
-
+    <script src="/public/javascript/settings.js"></script>
     <script src="/public/javascript/sidebar.js"></script>
   </body>
 </html>

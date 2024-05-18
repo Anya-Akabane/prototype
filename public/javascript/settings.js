@@ -26,3 +26,36 @@ function showAlert(message, type) {
     document.querySelector(".alert").remove();
   }, 3000);
 }
+
+// Path: public/javascript/settings.js
+document
+  .getElementById("profileForm")
+  .addEventListener("submit", function (event) {
+    // Get form fields
+    const name = document.getElementById("name").value;
+    const nickName = document.getElementById("nickName").value;
+    const bio = document.getElementById("bio").value;
+    const gender = document.getElementById("genders").value;
+    const birthdate = document.getElementById("birthdate").value;
+
+    // Validate fields
+    if (!name) {
+      alert("Name is required.");
+      event.preventDefault();
+    } else if (!nickName) {
+      alert("Nickname is required.");
+      event.preventDefault();
+    } else if (!bio) {
+      alert("Bio is required.");
+      event.preventDefault();
+    } else if (!gender) {
+      alert("Gender is required.");
+      event.preventDefault();
+    } else if (!birthdate) {
+      alert("Birthdate is required.");
+      event.preventDefault();
+    } else {
+      // All fields are valid
+      alert("Profile updated successfully.");
+    }
+  });
