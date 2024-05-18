@@ -209,3 +209,14 @@ body.dark label + select {
 }
 
 }
+
+
+.success {
+  border-color: green;
+  margin-top: 1rem;
+}
+
+.error {
+  border-color: red;
+  margin-top: 1rem;
+}
