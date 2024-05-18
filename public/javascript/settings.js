@@ -1,61 +1,40 @@
-document
-  .getElementById("profileForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
 
-    // Fetch form data
-    const formData = new FormData(this);
+// // Path: public/javascript/settings.js
 
-    // You can do further validation here
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-    // Show alert
-    showAlert("Changes saved successfully!", "success");
-  });
+  var name = document.getElementById('name').value;
+  var nickName = document.getElementById('nickName').value;
+  var bio = document.getElementById('bio').value;
+  var gender = document.getElementById('genders').value;
+  var birthdate = document.getElementById('birthdate').value;
 
-function showAlert(message, type) {
-  const alertDiv = document.createElement("div");
-  alertDiv.className = `alert alert-${type}`;
-  alertDiv.appendChild(document.createTextNode(message));
+  var errorMessage = "";
 
-  const container = document.querySelector(".container");
-  const form = document.getElementById("profileForm");
-  container.insertBefore(alertDiv, form);
+  if (!name) {
+    errorMessage += "Name field must be filled out!\n";
+  }
 
-  // Remove alert after 3 seconds
-  setTimeout(function () {
-    document.querySelector(".alert").remove();
-  }, 3000);
-}
+  if (!nickName) {
+    errorMessage += "Nickname field must be filled out!\n";
+  }
 
-// Path: public/javascript/settings.js
-document
-  .getElementById("profileForm")
-  .addEventListener("submit", function (event) {
-    // Get form fields
-    const name = document.getElementById("name").value;
-    const nickName = document.getElementById("nickName").value;
-    const bio = document.getElementById("bio").value;
-    const gender = document.getElementById("genders").value;
-    const birthdate = document.getElementById("birthdate").value;
+  if (!bio) {
+    errorMessage += "Bio field must be filled out!\n";
+  }
 
-    // Validate fields
-    if (!name) {
-      alert("Name is required.");
-      event.preventDefault();
-    } else if (!nickName) {
-      alert("Nickname is required.");
-      event.preventDefault();
-    } else if (!bio) {
-      alert("Bio is required.");
-      event.preventDefault();
-    } else if (!gender) {
-      alert("Gender is required.");
-      event.preventDefault();
-    } else if (!birthdate) {
-      alert("Birthdate is required.");
-      event.preventDefault();
-    } else {
-      // All fields are valid
-      alert("Profile updated successfully.");
-    }
-  });
+  if (!gender) {
+    errorMessage += "Gender field must be filled out!\n";
+  }
+
+  if (!birthdate) {
+    errorMessage += "Birthdate field must be filled out!\n";
+  }
+
+  if (errorMessage) {
+    swal("Oops!", errorMessage, "error");
+  } else {
+    swal("Good job!", "Form submitted successfully!", "success");
+  }
+});

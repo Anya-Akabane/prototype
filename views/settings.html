@@ -15,6 +15,9 @@
       rel="stylesheet"
     />
 
+    <!-- Sweet Alert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+
     
     <!-- Favicon -->
     <link
@@ -275,7 +278,7 @@
             </div>
 
             <div class="form-profile">
-                <form action="">
+                <form action="" id="myForm">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" name="name" id="name" placeholder="Kanna Kamui">
@@ -290,11 +293,11 @@
                         <textarea name="bio" id="bio" placeholder="I am a walnut"></textarea>
                       </div>
                       <div class="form-group">
-                        <label for="Gender">Gender:</label>
+                        <label for="gender">Gender:</label>
                         <select name="gender" id="genders">
                         <option value="female">She/her</option>
                         <option value="male">He/Him</option>
-                        <option value="they">They/The,</option>
+                        <option value="they">They/Them</option>
                         </select>
                       </div>
 
@@ -315,5 +318,7 @@
     
     <script src="/public/javascript/settings.js"></script>
     <script src="/public/javascript/sidebar.js"></script>
-  </body>
+
+    <!-- sweet -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>  </body>
 </html>

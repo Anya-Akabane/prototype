@@ -137,6 +137,7 @@ select {
   font-size: 1rem;
   letter-spacing: 2px;
   color: white;
+  cursor: pointer;
 }
 
 label + input{
@@ -190,6 +191,7 @@ body.dark label + select {
 
   .btn-submits {
     margin-bottom: 40%;
+    
   }
 }
 
