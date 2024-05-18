@@ -398,6 +398,10 @@ body.dark .switch::before {
     transition: var(--tran-04);
   }
 
+  body.dark .header {
+    background-color: var(--primary-color-light);
+  }
+
   /* nav */
 
   .nav {
@@ -406,6 +410,8 @@ body.dark .switch::before {
     justify-content: space-between;
     align-items: center;
   }
+
+  
 
   .nav__img {
     width: 32px;
@@ -435,6 +441,11 @@ body.dark .switch::before {
     transition: var(--tran-04);
   }
 
+  body.dark .nav__menu {
+    background-color: var(--primary-color-light);
+  
+  }
+
   .nav__list,
   .nav__link {
     display: flex;
@@ -454,6 +465,14 @@ body.dark .switch::before {
 
   .nav__name {
     font-size: var(--tiny-font-size);
+  }
+
+  body.dark .nav__link {
+    color: var(--text-color);
+  }
+
+  body.dark .active-link {
+    color: var(--first-color);
   }
 
   .nav__icon {
