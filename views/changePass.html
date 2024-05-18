@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="/public/css/changePass.css">
 
-    
 
     <!-- Boxicons CSS -->
     <link
@@ -19,7 +18,7 @@
       rel="stylesheet"
     />
 
-    <title>Settings</title>
+    <title>Change Password</title>
   </head>
   <body>
     <!-- sidebar -->
@@ -27,12 +26,16 @@
       <header>
         <div class="image-text">
           <span class="image">
-            <img src="/public/images/logo-cookchat.png" alt="logo" />
+            <a href="">
+              <img src="/public/images/logo-cookchat.png" alt="logo" />
+            </a>
           </span>
 
           <div class="text header-text">
+            <a href="#">
+              <span class="name">COOKCHAT</span>
+            </a>
             
-            <span class="name">COOKCHAT</span>
           </div>
         </div>
 
@@ -55,44 +58,34 @@
             </li>
             <li class="nav-link">
               <a href="#">
-                <i class='bx bx-edit-alt icon'></i>
-                <span class="text nav-text">Edit Profile</span>
+                <i class="bx bx-bowl-hot icon"></i>
+                <span class="text nav-text">Recipes</span>
               </a>
             </li>
 
             <li class="nav-link">
               <a href="#">
-               <i class='bx bx-edit icon'></i>
-                <span class="text nav-text">Change Password</span>
+                <i class="bx bx-bookmark icon"></i>
+                <span class="text nav-text">Save</span>
               </a>
             </li>
 
             <li class="nav-link">
               <a href="#">
-                <i class='bx bxs-user-account icon' ></i>
-                <span class="text nav-text">Deactivate account</span>
+                <i class="bx bxs-plus-square icon"></i>
+                <span class="text nav-text">Create Post</span>
               </a>
             </li>
-
-             <li class="nav-link">
-              <a href="#">
-                <i class='bx bx-shield-alt-2 icon'></i>
-                <span class="text nav-text">Security</span>
-              </a>
-            </li>
-
-             <li class="nav-link">
-              <a href="#">
-                <i class='bx bx-help-circle icon'></i>
-                <span class="text nav-text">Support</span>
-              </a>
-            </li>
-
-
-          
 
             <li class="nav-link">
               <a href="#" class="dropdown-toggle">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Communities</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="/views/profile.html" class="dropdown-toggle">
                 <i class="icon"
                   ><img src="/public/images/profile.png" width="30px"
                 /></i>
@@ -179,19 +172,19 @@
     </header>
 
     <div class="hero">
-        
       <nav>
         <ul class="notification-drop">
-    <li class="item">
-      <i class="bx bxs-bell notification-bell" aria-hidden="true"></i> <span class="btn__badge pulse-button ">4</span>     
-      
-      <ul>
-        <li>First Item</li>
-        <li>Second Item</li>
-        <li>Third Item</li>
-      </ul>
-    </li>
-  </ul>
+          <li class="item">
+            <i class="bx bxs-bell notification-bell" aria-hidden="true"></i>
+            <span class="btn__badge pulse-button">4</span>
+
+            <ul>
+              <li>First Item</li>
+              <li>Second Item</li>
+              <li>Third Item</li>
+            </ul>
+          </li>
+        </ul>
 
         <img
           src="/public/images/user-img.jpg"
@@ -204,8 +197,14 @@
         <div class="sub-menus-wrap" id="subMenus">
           <div class="sub-menus">
             <div class="user-info">
-              <img src="/public/images/profile.png" />
-              <h3>Kanna Kamui</h3>
+              <a href="" class="sub-menus-link">
+                <img
+                  src="/public/images/profile.png"
+                  alt="profile"
+                  class="profile-pic"
+                />
+                <h3>Kanna Kamui</h3>
+              </a>
             </div>
             <hr />
 
@@ -215,8 +214,14 @@
             </a>
 
             <a href="#" class="sub-menus-link">
-              <i class='bx bxs-dashboard' ></i>
+              <i class="bx bxs-dashboard"></i>
               <p>Admin</p>
+            </a>
+
+            <a href="#" class="sub-menus-link" id="darkModeToggle">
+              <i class="bx bx-moon
+              "></i>
+              <p>Switch Theme</p>
             </a>
 
             <a href="#" class="sub-menus-link">
@@ -233,7 +238,6 @@
       </nav>
     </div>
 
-
     <section class="home">
         <div class="text">
             Settings 
@@ -248,17 +252,17 @@
                 <form action="">
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" required>
                      </div>
 
                      <div class="form-group">
                         <label for="new-password">New Password:</label>
-                        <input type="password" name="new-password" id="new-password">
+                        <input type="password" name="new-password" id="new-password" required>
                      </div>
 
                      <div class="form-group">
                         <label for="new-password">Confirm Password:</label>
-                        <input type="password" name="confirm-password" id="confirm-password">
+                        <input type="password" name="confirm-password" id="confirm-password" required>
                      </div>
                     
                       <div class="btn">
@@ -270,30 +274,6 @@
 
       </section>
 
-
-    <!-- <main>
-      
-
-      <section class="container section section__height" id="home">
-        <h2 class="section__title"></h2>
-      </section>
-
-      <section class="container section section__height" id="search">
-        <h2 class="section__title"></h2>
-      </section>
-
-      <section class="container section section__height" id="create">
-        <h2 class="section__title"></h2>
-      </section>
-
-      <section class="container section section__height" id="recipes">
-        <h2 class="section__title"></h2>
-      </section>
-
-      <section class="container section section__height" id="profile">
-        <h2 class="section__title"></h2>
-      </section>
-    </main> -->
 
     <script src="/public/javascript/changePass.js"></script>
 
