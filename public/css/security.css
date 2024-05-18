@@ -1,3 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: var(--body-color);
+  transition: var(--tran-05);
+}
+
+body.dark {
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #ddd;
+  --text-color: #ddd;
+}
+
+
+.edit-profile {
+  background-color: white;
+  width: 90%;
+  height: fit-content;
+  position: relative;
+  left: 5%;
+  top: 15%;
+  padding-bottom: 20px;
+  border-radius: 30px;
+}
+
+body.dark .edit-profile {
+  background-color: #242526;
+}
+
+.edit-profile .text {
+  display: relative;
+  font-size: 25px;
+  font-weight: 300;
+  top: 0;
+}
+
+body.dark .security-text{
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar.close ~ .home {
+    left: 0;
+    width: 100%;
+  }
+
+   .home {
+    width: 100%;
+  }
+  
+  .edit-profile {
+    width: 100%;
+    left: 0;
+  }
+
+  
+.security-text{
+    font-size: 1rem;
+    
+}
+
+
+.toggle .mail{
+  display: flex;
+
+}
+
+.toggle .mail p {
+  margin-left: 1rem;
+
+}
+
+.toggle{
+    display: flex;
+    flex-direction: column;
+}
+
+
+}
+
+
+@media only screen and (max-width: 932px) and (orientation: landscape) {
+  
+.edit-profile {
+  top: 22%;
+  height: fit-content;
+ 
+}
+
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -63,7 +167,7 @@ input:checked + .slider:before {
 .security-text{
     display: inline-block;
     margin: 30px;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-top: 3rem;
     
 }

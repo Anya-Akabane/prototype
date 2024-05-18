@@ -546,7 +546,7 @@ body.dark .switch::before {
 
   .sidebar header .toggle {
     position: absolute;
-    top: 4rem;
+    top: 2.2rem;
     right: -10px;
     transform: translateY(-50%) rotate(180deg);
   }
