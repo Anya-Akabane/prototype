@@ -7,7 +7,7 @@
     <!-- css -->
     <link rel="stylesheet" href="/public/css/sidebar.css" />
 
-    <link rel="stylesheet" href="/public/css/settings.css" />
+    <link rel="stylesheet" href="/public/css/support.css" />
 
     <!-- Boxicons CSS -->
     <link
@@ -15,10 +15,12 @@
       rel="stylesheet"
     />
 
-    <!-- Sweet Alert -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-    
     <!-- Favicon -->
     <link
       rel="icon"
@@ -26,7 +28,10 @@
       type="image/x-icon"
     />
 
-    <title>Edit Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
+    <title>Support</title>
   </head>
   <body>
     <!-- sidebar -->
@@ -65,37 +70,30 @@
               </a>
             </li>
             <li class="nav-link">
-              <a href="/views/settings.html">
-                <i class='bx bx-edit-alt icon'></i>
-                <span class="text nav-text">Edit</span>
-              </a>
-            </li>
-
-            <li class="nav-link">
-              <a href="/views/changePass.html">
-                <i class='bx bxs-key icon' ></i>
-                <span class="text nav-text">Change Password</span>
-              </a>
-            </li>
-
-            <li class="nav-link">
-              <a href="/views/security.html">
-                <i class='bx bx-shield icon' ></i>
-                <span class="text nav-text">Security</span>
-              </a>
-            </li>
-
-            <li class="nav-link">
-              <a href="/views/account.html" class="dropdown-toggle">
-                <i class='bx bxs-user-account icon' ></i>
-                <span class="text nav-text">Deactivate Account</span>
+              <a href="#">
+                <i class="bx bx-bowl-hot icon"></i>
+                <span class="text nav-text">Recipes</span>
               </a>
             </li>
 
             <li class="nav-link">
               <a href="#">
-                <i class='bx bx-help-circle icon'></i>
-                <span class="text nav-text">Support</span>
+                <i class="bx bx-bookmark icon"></i>
+                <span class="text nav-text">Save</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bxs-plus-square icon"></i>
+                <span class="text nav-text">Create Post</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#" class="dropdown-toggle">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Communities</span>
               </a>
             </li>
 
@@ -150,29 +148,33 @@
 
             <li class="nav__item">
               <a href="#search" class="nav__link">
-                <i class="bx bx-edit-alt nav__icon"></i>
-                <span class="nav__name">Edit</span>
+                <i class="bx bx-search nav__icon"></i>
+                <span class="nav__name">Search</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="#create" class="nav__link">
-                <i class="bx bxs-key nav__icon"></i>
-                <span class="nav__name">Password</span>
+                <i class="bx bx-plus-circle nav__icon"></i>
+                <span class="nav__name">Create</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="#recipes" class="nav__link">
-                <i class="bx bx-shield nav__icon"></i>
-                <span class="nav__name">Security</span>
+                <i class="bx bx-bowl-hot nav__icon"></i>
+                <span class="nav__name">Recipes</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="#profile" class="nav__link">
-                <i class="bx bxs-user-account nav__icon"></i>
-                <span class="nav__name">Account</span>
+                <img
+                  src="/public/images/profile.png"
+                  width="25px"
+                  class="nav__icon"
+                />
+                <span class="nav__name">Profile</span>
               </a>
             </li>
           </ul>
@@ -216,7 +218,6 @@
                 />
                 <h3>Kanna Kamui</h3>
               </a>
-              
             </div>
             <hr />
 
@@ -229,7 +230,6 @@
               <i class="bx bxs-dashboard"></i>
               <p>Admin</p>
             </a>
-
 
             <a href="#" class="sub-menus-link" id="darkModeToggle">
               <i class="bx bx-moon
@@ -251,74 +251,80 @@
       </nav>
     </div>
 
-
-
     <section class="home">
-        <div class="text">
-            Settings 
+      <div class="text">
+        Support & Help
+      </div>
+
+      <section class="contact1">
+        <div class="content1">
+            <h2>Contact Us</h2>
+            <p>For any inquiries, please contact us at:</p>
+
         </div>
-        
-        <div class="edit-profile">
-           <div class="text">
-                <h5>Edit Profile</h5>
-           </div>
 
-           <div class="profile">
-              <div class="profile-img">
-                  <img src="/public/images/profile.png" alt="profile" class="profile-pic">
-              </div>
+        <div class="container1">
+            <div class="contactInfo1">
+                <div class="box1">
+                    <div class="icon1">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div class="text1">
+                        <h3>Address</h3>
+                        <p>1234 Street Name, City Name, United States</p>
+                    </div>
+                </div>
 
-              <div class="profile-name">
-                <p>Kanna Kamui</p>
+                <div class="box1">
+                    <div class="icon1">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <div class="text1">
+                        <h3>Email</h3>
+                        <p>s4020232@rmit.edu</p>
+                    </div>
+                </div>
 
-                <div class="btn">
-                    <button class="btn-change">Change Profile Picture</button>
-                 </div>   
-              </div>
+                 <div class="box1">
+                    <div class="icon1">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text1">
+                        <h3>Phone</h3>
+                        <p>+123456789</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-profile">
-                <form action="" id="myForm">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" placeholder="Kanna Kamui">
-                     </div>
-                     <div class="form-group">
-                        <label for="nickName">Nickname:</label>
-                        <input type="text" name="nickName" id="nickName" placeholder="Walnut">
-                     </div>
-                     
-                      <div class="form-group">
-                        <label for="bio">Bio:</label>
-                        <textarea name="bio" id="bio" placeholder="I am a walnut"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="gender">Gender:</label>
-                        <select name="gender" id="genders">
-                        <option value="female">She/her</option>
-                        <option value="male">He/Him</option>
-                        <option value="they">They/Them</option>
-                        </select>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="birthdate">Birthdate:</label>
-                        <input type="date" name="birthdate" id="birthdate">
-                      </div>
-
-                      <div class="btn">
-                        <button type="submit" class="btn btn-submits">Save Change</button>
-                      </div>
-                  </form>  
-
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required" id="userName">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="" required="required" id="userEmail">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required" id="userText"></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
         </div>
-
       </section>
 
-    
-    <script src="/public/javascript/support.js"></script>
-    <script src="/public/javascript/sidebar.js"></script>
+    </section>
 
-    <!-- sweet -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>  </body>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="/public/javascript/support.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="/public/javascript/sidebar.js"></script>
+  </body>
 </html>
