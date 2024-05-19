@@ -1,8 +1,19 @@
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #ddd;
+    --text-color: #ddd;
+  }
+
+
+
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e4e9f7;
+    
 }
 
 .create-a-post {
@@ -15,13 +26,22 @@
     padding-right: 3rem;
 }
 
+body.dark .home .create-a-post {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
 .create-a-post h1 {
     margin-left: 0.5rem;
     margin-top: 1rem;
 }
 
+#my-form label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
 
-#my-form label, input{
+#my-form input{
     display: block;
     margin-bottom: 0.5rem;
 }
