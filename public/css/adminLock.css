@@ -97,8 +97,8 @@ body.dark{
 }
 
 .select{
-  background: #a0acc9;
-  color: #fff;
+  background: #FDD9E5;
+  color: #26489a;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,12 +110,12 @@ body.dark{
 }
 
 .select-clicked{
-  border: 2px #26489a solid;
-  box-shadow: 0 0 8em #26489a;
+
+  box-shadow: 0 0 8em #FD6CD6
 }
 
 .select:hover{
-  background: #26489a;
+  background: #FCD5D6;
 
 }
 
@@ -135,11 +135,10 @@ body.dark{
 .menu-li {
   list-style: none;
   padding: 0.2em 0.5em;
-  background: #5f7199;
+  background: #fde0f3;
   border: 2px solid #a0acc9;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  color: #9fa5b5;
   position: absolute;
   top: 4em;
   left: 50%;
@@ -161,11 +160,11 @@ body.dark{
 
 
 .menu-li li:hover{
-  background: #26489a;
+  background: #fba5be;
 }
 
 .active{
-  background: #26489a;
+  background: #FF779E;
 }
 
 .menu-open{
@@ -190,10 +189,18 @@ body.dark{
     border-radius: 20px;
 }
 
+body.dark .manage-users {
+    background-color: var(--primary-color);
+}
+
 .user {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+
+body.dark .user {
+    color: var(--text-color);
 }
 
 .user .checkboxes{
@@ -267,23 +274,15 @@ body.dark{
   cursor: pointer;
   
 }
-
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 768px) */
+@media screen and (max-width: 768px) {
 
   .last{
     height : calc(100% + 20rem) !important;
    
   }
 
-  
-    .sidebar.close ~ .home {
-        left: 0;
-        width: 100%;
-       
-        
-    }
-
-    .sidebar.close ~ .home .search-box2{
+   .home .search-box2{
       width: fit-content;
       height: fit-content;
       position: absolute;
@@ -321,12 +320,10 @@ body.dark{
 
 
   .manage-users {
-    width: 100%;
-    left: 0;
-    margin: 0;
+    width: 90%;
+    left: 2%;
+    margin-bottom: 5%;
     padding: 10px;
-    
-   
    
   }
 
