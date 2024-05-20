@@ -10,21 +10,27 @@ let unfilledShare = document.getElementById('unfilledShare');
 let filledShare = document.getElementById('filledShare');
 
 heart.addEventListener('click', function() {
-        unfilledHeart.classList.toggle('d-none');
-        filledHeart.classList.toggle('d-none');
+        unfilledHeart.classList.toggle('none');
+        filledHeart.classList.toggle('none');
 });
 
-comment.addEventListener('click', function() {
-        unfilledComment.classList.toggle('d-none');
-        filledComment.classList.toggle('d-none');
+comment.addEventListener('mouseover', function() {
+        unfilledComment.classList.toggle('none');
+        filledComment.classList.toggle('none');
 });
+
+comment.addEventListener('mouseout', function() {
+        unfilledComment.classList.toggle('none');
+        filledComment.classList.toggle('none');
+});
+
 
 share.addEventListener('mouseover', function() {
-        unfilledShare.classList.toggle('d-none');
-        filledShare.classList.toggle('d-none');
+        unfilledShare.classList.toggle('none');
+        filledShare.classList.toggle('none');
 });
 
 share.addEventListener('mouseout', function() {
-        unfilledShare.classList.toggle('d-none');
-        filledShare.classList.toggle('d-none');
+        unfilledShare.classList.toggle('none');
+        filledShare.classList.toggle('none');
 });
