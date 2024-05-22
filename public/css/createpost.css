@@ -32,17 +32,21 @@ body.dark .home .create-a-post {
 
 .create-a-post h1 {
     margin-left: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
 }
 
 #my-form label {
     display: inline-block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 #my-form input, textarea{
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+#title, #post-content {
+    width: 95%;
 }
 
 #my-form textarea {
@@ -56,6 +60,18 @@ body.dark .home .create-a-post {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     padding: 5px 10px;
+}
+
+#drop-zone{
+    border: 0.125rem dashed #bbb;
+    border-radius: 0.625rem;
+    padding:30px;
+    text-align:center;
+    color:#bbb;
+    width: 95%;
+    cursor: pointer;
+    -webkit-user-select: none;  /* Chrome, Safari and Opera */
+    user-select: none;     
 }
 
 #imagePreview div {

@@ -250,11 +250,13 @@
           <input type="text" name="title" placeholder="Title" id="title"/>
           
           <label for="post-content">Content</label>
-          <textarea id="post-content" name="post-content" rows="5" cols="35" placeholder="Insert your content here"></textarea>
+          <textarea id="post-content" name="post-content" rows="4" cols="37" placeholder="Insert your content here"></textarea>
           
           <label for="photos">Upload photos</label>
-          <input type="file" id="photos" name="photos" accept="image/*" multiple onchange="previewImages()">
-          
+          <div id="drop-zone">
+          Drop your files here
+          </div>
+          <input style="display:none;" type="file" id="photos" name="photos" accept="image/*" multiple onchange="previewImages()">          
           <div id="imagePreview"></div>
 
           <button type="submit">Submit</button>

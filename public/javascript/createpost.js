@@ -1,3 +1,30 @@
+var dropZone = document.getElementById('drop-zone');
+var fileInput = document.getElementById('photos');
+
+// When the user drags files over the drop zone, change the color of the border
+dropZone.ondragover = function() {
+  this.style.borderColor = '#999';
+  return false;
+};
+
+// When the user stops dragging files over the drop zone, change the color of the border back to its original color
+dropZone.ondragleave = function() {
+  this.style.borderColor = '#bbb';
+  return false;
+};
+
+// When the user drops files on the drop zone, get the files and trigger the file input field's change event
+dropZone.ondrop = function(e) {
+  e.preventDefault(); // This is necessary to prevent the browser from opening the files
+  this.style.borderColor = '#bbb';
+  fileInput.files = e.dataTransfer.files;
+  previewImages();
+};
+
+document.getElementById('drop-zone').addEventListener('click', function() {
+  document.getElementById('photos').click();
+});
+
 function previewImages() {
   var preview = document.getElementById('imagePreview');
   var files = document.getElementById('photos').files;
