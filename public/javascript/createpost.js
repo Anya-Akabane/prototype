@@ -1,35 +1,35 @@
-let themeStylesheet = document.getElementById('quill-theme-stylesheet');
+function previewImages() {
+  var preview = document.getElementById('imagePreview');
+  var files = document.getElementById('photos').files;
+  for (var i = 0; i < files.length; i++) {
+    var file = files[i];
+    var img = document.createElement('img');
+    img.style.maxWidth = '300px'; // set max width to limit the size of the preview images
 
+    var container = document.createElement('div');
+    var deleteButton = document.createElement('button');
+    deleteButton.innerHTML = "<i class='bx bx-trash'></i>";
+    deleteButton.className = 'deleteBtn';
+    
+    container.appendChild(img);
+    container.appendChild(deleteButton);
+    preview.appendChild(container);
 
-const quill = new Quill('#editor', {
-  modules: {
-    toolbar: '#toolbar-container'
-  },
-placeholder: 'Compose an epic...',
-  theme: 'snow'
-});
+    var reader = new FileReader();
+    reader.onload = (function(aImg) { 
+      return function(e) { 
+        aImg.src = e.target.result; 
+      }; 
+    })
+    (img);
+    reader.readAsDataURL(file);
+  }
+  document.getElementById('photos').value = ''; // clear the file input for additional uploads
+}
 
-// Create a new MutationObserver instance
-let observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      if (mutation.attributeName === "class") {
-        let classList = mutation.target.classList;
-        if (classList.contains('dark')) {
-          themeStylesheet.href = "/public/css/quill.smoke.css";
-        } else {
-          themeStylesheet.href = "https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css";
-        }
-      }
-    });
-  });
-  
-  // Start observing the body element for attribute changes
-  observer.observe(body, { attributes: true });
-
-document.querySelector('form').addEventListener('submit', function(e) {
-    var hiddenInput = document.createElement('input');
-    hiddenInput.setAttribute('type', 'hidden');
-    hiddenInput.setAttribute('name', 'editorContent');
-    hiddenInput.setAttribute('value', text);
-    this.appendChild(hiddenInput);
+document.addEventListener('click', function(e) {
+  // Check if the clicked element is a delete button
+  if (e.target.classList.contains('deleteBtn') || e.target.parentNode.classList.contains('deleteBtn')) {
+    e.target.closest('.deleteBtn').parentNode.remove();
+  }
 });
