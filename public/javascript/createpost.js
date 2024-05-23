@@ -13,6 +13,16 @@ dropZone.ondragleave = function() {
   return false;
 };
 
+dropZone.addEventListener('keydown', function(event) {
+  // Check if the key pressed was either Enter or Space
+  if (event.key === 'Enter' || event.key === ' ') {
+      // Prevent the default action to stop scrolling when Space is pressed
+      event.preventDefault();
+      // Trigger the click event on the file input
+      fileInput.click();
+  }
+});
+
 // When the user drops files on the drop zone, get the files and trigger the file input field's change event
 dropZone.ondrop = function(e) {
   e.preventDefault(); // This is necessary to prevent the browser from opening the files
