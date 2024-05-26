@@ -14,11 +14,12 @@ body.dark {
     justify-content: center;
 }
 
-.create-a-post {
+.create-a-community {
     display: block;
     width: 40rem;
     margin-top: 4rem;
-    padding-bottom: 100px;
+    margin-bottom: 4rem;
+    height: auto;
     background-color: white;
     border-radius: 1.75rem;
     padding-left: 3rem;
@@ -26,33 +27,30 @@ body.dark {
     overflow: auto;
 }
 
-body.dark .home .create-a-post {
+body.dark .home .create-a-community {
     background-color: var(--primary-color);
     color: var(--text-color);
 }
 
-.create-a-post h1 {
+.create-a-community h1 {
     margin-left: 0.5rem;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
 }
 
 #my-form label {
     display: inline-block;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
-#my-form input, textarea{
+#my-form input {
     display: block;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
-#title, #description {
+#title {
     width: 95%;
 }
 
-#my-form textarea {
-    resize: none;
-}
 
 #my-form button{
     cursor: pointer;

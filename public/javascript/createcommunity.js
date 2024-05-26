@@ -32,10 +32,10 @@ function previewImages() {
   var preview = document.getElementById('imagePreview');
   var files = fileInput.files;
 
-  // If files contains more than four files, remove the excess files, alert the user, and return
-  if (files.length > 4) {
-    files = Array.from(files).slice(0, 4);
-    alert("You can only upload four images.");
+  // If files contains more than one file, keep only the first file, alert the user, and return
+  if (files.length > 1) {
+    files = Array.from(files).slice(0, 1);
+    alert("You can only upload one image.");
   }
 
   for (var i = 0; i < files.length; i++) {
@@ -72,13 +72,6 @@ dropZone.ondrop = function(e) {
   
     // Change the border color of the drop zone to indicate that the drop event has ended
     this.style.borderColor = '#bbb';
-    
-    // If filesArray already contains a file, alert the user and return
-    // This prevents the user from uploading more than one image
-    if (filesArray.length > 4) {
-      alert("You can only upload four images.");
-      return;
-    }
     
     // Convert the FileList from the drop event to an array and filter it
     // This allows us to use array methods and remove files that don't meet our criteria
@@ -136,8 +129,8 @@ document.addEventListener('click', function(e) {
 // Validate file types and sizes before adding them to filesArray
 fileInput.onchange = function() {
     // If filesArray already contains a file, alert the user and return
-    if (filesArray.length >= 4) {
-      alert("You can only upload four images.");
+    if (filesArray.length >= 1) {
+      alert("You can only upload one image.");
       return;
     }
   
@@ -145,6 +138,12 @@ fileInput.onchange = function() {
       // Only allow image files
       if (!file.type.startsWith('image/')) {
         alert("Only image files are allowed.");
+        fileInput.value = ''; // Clear the file input
+        return false;
+      }
+      // Only allow files smaller than 1MB
+      if (file.size > 1024 * 1024) {
+        alert("Files larger than 1MB are not allowed.");
         fileInput.value = ''; // Clear the file input
         return false;
       }
