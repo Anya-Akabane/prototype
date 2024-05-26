@@ -141,12 +141,6 @@ fileInput.onchange = function() {
         fileInput.value = ''; // Clear the file input
         return false;
       }
-      // Only allow files smaller than 1MB
-      if (file.size > 1024 * 1024) {
-        alert("Files larger than 1MB are not allowed.");
-        fileInput.value = ''; // Clear the file input
-        return false;
-      }
       return true;
     });
     previewImages();
